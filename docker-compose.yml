@@ -53,6 +53,15 @@ services:
       IS_TESTING: "false"
       # 모든 로컬 호스트 출처 허용
       ALLOW_ORIGINS: '["http://localhost:3000", "http://localhost:8080", "http://localhost", "http://127.0.0.1:3000", "http://127.0.0.1:8080", "http://127.0.0.1"]'
+    command:
+        - uv
+        - run
+        - uvicorn
+        - langconnect.server:APP
+        - --host
+        - 0.0.0.0
+        - --port
+        - "8080"
     volumes:
       - ./langconnect:/app/langconnect
     networks:
@@ -71,11 +80,13 @@ services:
     env_file:
       - .env
     environment:
-      API_BASE_URL: http://api:8080
+      API_BASE_URL: http://localhost:8080
       SUPABASE_URL: ${SUPABASE_URL}
       SUPABASE_KEY: ${SUPABASE_KEY}
       STREAMLIT_PORT: ${STREAMLIT_PORT:-8501}
-    command: uv run streamlit run Main.py --server.port=${STREAMLIT_PORT:-8501} --server.address=0.0.0.0
+    #command: uv run streamlit run Main.py --server.port=${STREAMLIT_PORT:-8501} --server.address=0.0.0.0
+    command: >
+      sh -c "uv run streamlit run Main.py --server.port=${STREAMLIT_PORT:-8501} --server.address=0.0.0.0"
     volumes:
       - ./Main.py:/app/Main.py
       - ./pages:/app/pages
