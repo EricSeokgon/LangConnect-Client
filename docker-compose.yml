@@ -80,7 +80,7 @@ services:
     env_file:
       - .env
     environment:
-      API_BASE_URL: http://localhost:8080
+      API_BASE_URL: http://api:8080
       SUPABASE_URL: ${SUPABASE_URL}
       SUPABASE_KEY: ${SUPABASE_KEY}
       STREAMLIT_PORT: ${STREAMLIT_PORT:-8501}
