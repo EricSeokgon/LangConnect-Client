@@ -40,4 +40,4 @@ EXPOSE 8080 8501 8765
 
 # 기본 명령은 API 서버 실행
 # streamlit 서비스를 위해 docker-compose.yml에서 재정의 가능
-CMD ["uv", "run", "uvicorn", "langconnect.server:APP", "--host", "0.0.0.0", "--port",
+CMD ["uv", "run", "uvicorn", "langconnect.server:APP", "--host", "0.0.0.0", "--port", "8080"]
