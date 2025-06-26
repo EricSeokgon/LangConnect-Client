@@ -17,9 +17,9 @@ else:
 
 def get_embeddings() -> Embeddings:
     """Get the embeddings instance based on the environment."""
-    from langchain_openai import OpenAIEmbeddings
+    from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
-    return OpenAIEmbeddings(model="text-embedding-3-small")
+    return GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 
 
 DEFAULT_EMBEDDINGS = get_embeddings()
