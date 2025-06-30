@@ -571,4 +571,4 @@ python test_mcp_metadata.py
 
 ---
 
-❤️로 만들어졌습니다 by [IRCP LAB](https://github.com/EricSeokgon/)
+❤️로 만들어졌습니다 by [EricSeokgon LAB](https://github.com/EricSeokgon/)
