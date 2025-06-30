@@ -336,7 +336,7 @@ def main():
     st.markdown(
         """
     <div style='text-align: center; color: #666; padding: 20px;'>
-        ❤️로 <a href='https://github.com/teddynote-lab' target='_blank'>TeddyNote LAB</a>에서 제작
+        ❤️로 <a href='https://github.com/EricSeokgon/' target='_blank'>EricSeokgon LAB</a>에서 제작
     </div>
     """,
         unsafe_allow_html=True,
