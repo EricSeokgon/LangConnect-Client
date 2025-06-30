@@ -17,6 +17,7 @@ RUN apt-get update && \
     poppler-utils \
     tesseract-ocr \
     pandoc \
+    langchain-google-genai \
     && rm -rf /var/lib/apt/lists/*
 
 # pip를 사용하여 uv 설치
